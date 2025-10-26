@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Location Finder</title>
+    <link rel="stylesheet" href="maps.css">
+</head>
+<body>
+
+
+                          <div class="navbar">
+        <h4 class="logo">V.com</h4>
+        <div class="search">
+          <input
+            type="text"
+            class="placeholder"
+            placeholder="       Search product..."
+          />
+          <button class="sumitbtn" type="submit">verify</button>
+        </div>
+        <!-- <div class="searchicon"><img src="image/searchiconmain2.jpg" alt="" srcset=""></div> -->
+        <div class="hamburger-icon">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <div class="hamburger-content">
+            <ul>
+              <li><a href="home.html">Home</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="#">sign up</a></li>
+              <li><a href="#">Vcode</a></li>
+              <li><a href="#">dispatch</a></li>
+              <li><a href="search&shop.html">search&shop</a></li>
+              <li><a href="maps.html">gps&map</a></li>
+              <li><a href="#">blog</a></li>
+              <li><a href="#">join our team</a></li>
+              <li><a href="#">chetta</a></li>
+              <li><a href="#">Login</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+
+            </nav>
+        </div>
+
+
+    <div class="container">
+      
+        <div class="content">
+            <div class="map-container">
+                <div id="map"></div>
+            </div>
+            
+            <div class="info-panel">
+                <div class="coordinates">
+                    <h2>Your Coordinates</h2>
+                    <div class="coordinate-item">
+                        <span class="coordinate-label">Latitude:</span>
+                        <span id="latitude" class="coordinate-value">--</span>
+                    </div>
+                    <div class="coordinate-item">
+                        <span class="coordinate-label">Longitude:</span>
+                        <span id="longitude" class="coordinate-value">--</span>
+                    </div>
+                    <div class="coordinate-item">
+                        <span class="coordinate-label">Accuracy:</span>
+                        <span id="accuracy" class="coordinate-value">-- meters</span>
+                    </div>
+                </div>
+                
+                <div class="actions">
+                    <button id="locate-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                            <circle cx="12" cy="10" r="3"></circle>
+                        </svg>
+                        Find My Location
+                    </button>
+                    
+                    <button id="share-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"></path>
+                            <polyline points="16 6 12 2 8 6"></polyline>
+                            <line x1="12" y1="2" x2="12" y2="15"></line>
+                        </svg>
+                        Share Location
+                    </button>
+                </div>
+                
+                <div id="status" class="status"></div>
+            </div>
+        </div>
+
+        <h3 class="bottomheading">Privacy Notice</h3>
+            <p class="bottomheading">This page uses the Geolocation API to determine your location.
+                Your data is not stored or shared without your permission.</p>
+
+
+
+        <!-- <div class="container"> -->
+                  <div class="footer">
+        <h5 class="h5">
+          click on any of the icon below to follow us on socials
+        </h5>
+
+        <div class="social-icons">
+          <a href="#"><img src="image\fb3black.jpg" alt="Facebook" /></a>
+          <a href="#"><img src="image\x(2).png" alt="Twitter" /></a>
+          <a href="#"><img src="image/insta (1).png" alt="Instagram" /></a>
+          <a href="#"><img src="image/linked (1).png" alt="LinkedIn" /></a>
+          <a href="#"><img src="image\whatsap.png" alt="whatsapp" /></a>
+        </div>
+
+        <div class="footer-links">
+          <a href="#">chetta</a>
+          <a href="#">Help</a>
+          <a href="#">privacy</a>
+          <a href="#">dispatch</a>
+          <a href="#">search&shop</a>
+          <a href="#">map&gps</a>
+        </div>
+
+        <div class="address">
+          <h4>
+
+            Chetta Technologies Ltd. 123A Ogbor Hill Road
+            Or: 15 Industry Road, Aba Aba, Abia State Nigeria<br />
+            Phone: +234 803 123 4567<br />
+            Email: info@chetta.tech<br />
+            Website: www.chetta.tech
+          </h4>
+        </div>
+
+        <div class="dtl">
+          <button class="dtlbutton">DATE</button>
+          <button class="dtlbutton">TIME</button>
+          <button class="dtlbutton">LOCATION</button>
+          <button class="dtlbutton">EMERGENCY</button>
+          <button class="dtlbutton">MORE</button>
+        </div>
+
+        <div class="footer-text">
+          <p>
+                        <div class="staricon">  ⭐⭐⭐⭐⭐</div>
+            Made with ❤️ by V.com Team<br />© 2025 V.com. A product of CHETTA
+            Technologies Ltd, All rights reserved.
+          </p>
+        </div>
+      </div>
+    
+                
+     </div>
+    </footer>
+
+
+        </footer>
+    </div>
+
+        
+
+    <!-- Load Google Maps API -->
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap">
+    </script>
+    
+    <script src="maps.js"></script>
+</body>
+</html>
